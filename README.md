@@ -4,6 +4,8 @@ A production-ready declarative orchestration blueprint designed to establish hig
 
 ## 🏗️ Cluster Architecture
 
+
+
                [ External Public Traffic Entry ]
                               │
                               ▼
@@ -21,6 +23,7 @@ A production-ready declarative orchestration blueprint designed to establish hig
  │ │ scalable-web:nginx │ ││ │ scalable-web:nginx │ ││ │ scalable-web:nginx │ │
  │ └────────────────────┘ ││ └────────────────────┘ ││ └────────────────────┘ │
  └────────────────────────┘└────────────────────────┘└────────────────────────┘
+
 
 
 
