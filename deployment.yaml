@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scalable-web-deployment
+  labels:
+    app: scalable-web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: scalable-web
+  template:
+    metadata:
+      labels:
+        app: scalable-web
+    spec:
+      containers:
+      - name: web-node
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+          requests:
+            cpu: "250m"
+            memory: "128Mi"
