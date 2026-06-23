@@ -26,7 +26,7 @@ A production-ready declarative orchestration blueprint designed to establish hig
 > 💡 **📍 ARCHITECTURE DIAGRAM INSERTION POINT**
 > Create a folder named `docs/` at the root of this repository and save your visual Kubernetes cluster network layout schematic (e.g., `k8s-cluster.png`) inside it. Replace this quote block with your active asset reference link:
 <p align="center">
-  <img src="./kubernetes-scalable-app diagram.png" alt="Architecture Diagram" width="650">
+  <img src="./kubernetes-scalable-app/kubernetes-scalable-app diagram.png" alt="Architecture Diagram" width="650">
 </p>
 
 ---
