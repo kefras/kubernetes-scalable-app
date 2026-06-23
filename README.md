@@ -4,23 +4,26 @@ A production-ready declarative orchestration blueprint designed to establish hig
 
 ## 🏗️ Cluster Architecture
 
-[ External Public Traffic Entry ]
+               [ External Public Traffic Entry ]
                               │
                               ▼
-                ┌───────────────────────────┐
-                │    K8s Service Layer      │
-                │   (NodePort: 30080)       │
-                └─────────────┬─────────────┘
-                              │
-     ┌────────────────────────┼────────────────────────┐
-     │ Distributed Load       │ Distributed Load       │ Distributed Load
-     ▼                        ▼                        ▼
-┌────────────────────────┐┌────────────────────────┐┌────────────────────────┐
-│     Pod Replica 1      ││     Pod Replica 2      ││     Pod Replica 3      │
-│ ┌────────────────────┐ ││ ┌────────────────────┐ ││ ┌────────────────────┐ │
-│ │ scalable-web:nginx │ ││ │ scalable-web:nginx │ ││ │ scalable-web:nginx │ │
-│ └────────────────────┘ ││ └────────────────────┘ ││ └────────────────────┘ │
-└────────────────────────┘└────────────────────────┘└────────────────────────┘
+                  ┌───────────────────────────┐
+                  │    K8s Service Layer      │
+                  │   (NodePort: 30080)       │
+                  └─────────────┬─────────────┘
+                                │
+      ┌───────────── ───────────┼────────────────────────┐
+      │ Distributed Load        │ Distributed Load       │ Distributed Load
+      ▼                         ▼                        ▼
+ ┌────────────────────────┐┌────────────────────────┐┌────────────────────────┐
+ │     Pod Replica 1      ││     Pod Replica 2      ││     Pod Replica 3      │
+ │ ┌────────────────────┐ ││ ┌────────────────────┐ ││ ┌────────────────────┐ │
+ │ │ scalable-web:nginx │ ││ │ scalable-web:nginx │ ││ │ scalable-web:nginx │ │
+ │ └────────────────────┘ ││ └────────────────────┘ ││ └────────────────────┘ │
+ └────────────────────────┘└────────────────────────┘└────────────────────────┘
+
+
+
 
 
 > 💡 **📍 ARCHITECTURE DIAGRAM INSERTION POINT**
